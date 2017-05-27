@@ -1,61 +1,80 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<title>PROJEKT</title>
-		<meta charset="UTF-8">
-		<base target="_blank">
-		<link rel="stylesheet" type="text/css" href="projekt.css">
-		<script src="projekt.js" src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.13.1/math.min.js"></script>
-	</head>
+<head>
+	<title>PROJEKT</title>
+	<meta charset="UTF-8">
+	<base target="_blank">
+	<link rel="stylesheet" type="text/css" href="projekt.css">
+	<script src="projekt.js" src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.13.1/math.min.js"></script>
+</head>
+
+<body>
 	
-	<body>
-		<form>
-			Vali esimese maatriksi suurused:
-			<select id="XSelect1">
-			  <option value="1">1</option>
-			  <option value="2">2</option>
-			  <option value="3">3</option>
-			  <option value="4">4</option>
-			  <option value="5">5</option>
-			</select>
-			<select id="YSelect1">
-			  <option value="1">1</option>
-			  <option value="2">2</option>
-			  <option value="3">3</option>
-			  <option value="4">4</option>
-			  <option value="5">5</option>
-			</select>
-		</form>
+	<!-- X on rida ja Y on veerg -->
+
+	<form>
+		Esimene
+		<select id="m1x">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
 		
-		<form>
-			Vali teise maatriksi suurused:
-			<select id="XSelect2">
-			  <option value="1">1</option>
-			  <option value="2">2</option>
-			  <option value="3">3</option>
-			  <option value="4">4</option>
-			  <option value="5">5</option>
-			</select>
-			<select id="YSelect2">
-			  <option value="1">1</option>
-			  <option value="2">2</option>
-			  <option value="3">3</option>
-			  <option value="4">4</option>
-			  <option value="5">5</option>
-			</select>
-		</form>
+		<select id="m1y">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+	</form>
+	
+	<form>
+		Teine
+		<select id="m2x">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
 		
-		<button type="button" onclick="ConfrmSelect()">Kinnita vastu</button><br><br>
-				
-		<table id="InputTable1"></table>
-		<p>-------------------Lihtne eraldusjoon kahe maatriksi vahel-------------------</p>
-		<table id="InputTable2"></table> <br><br>
+		<select id="m2y">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+	</form>
+	
+	<button type="button" onclick="generateMatrix()">Genereeri maatriks</button>
+	
+	<div id="matrixContainer">
 		
-		<button type="button" onclick="Calculate()">Arvuta vastus</button> <!--<button type="button" onclick="Delete()">Kustuta kastid</button>--><br><br>
-		<!--Lihtne eraldusjoon kahe maatriksi vahel
-		<p>-------------------Lihtne eraldusjoon kahe maatriksi vahel-------------------</p>
-		<table id="InputTable2"></table>-->
+		<!-- maatriksid arvude sisestuseks -->
+		<div id="matrix1Container"><table id="matrix1"></table></div>
+		<div id="matrix2Container"><table id="matrix2"></table></div>
+		
+		<!-- maatriksid vastuste genereerimiseks -->
+		
+		<div id="matrixAnswerContainer"><table id="matrixAnswer"></table></div>
+		<div id="matrixFinalAnswerContainer"><table id="matrixFinalAnswer"></table></div>
+		
+	</div>
+	
+	<button type="button">Arvuta maatriksi vastus</button>
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -102,5 +121,5 @@ SPAN.td
 			</div>
 		</div>
 		-->
-	</body>
+</body>
 </html>
